@@ -118,6 +118,10 @@ function fillPlayer(player,nr, side, max){
     $top.find("#hp_p").prepend(statistics.health == 0 ? $("<img />").attr("src", "/files/img/death.png").css(death_css) : "");
     $top.find(".hp_bar").css("background", gradient);
 
+    if(statistics.health != 0){
+        $top.find(".hp_bar").css("background", "linear-gradient(to " + side +", rgba(0,0,0,0.65) " + (100-statistics.health) + "%, " + health_color + " " + (100-statistics.health) + "%)");
+    }
+
     $bottom.find(".kills").text(statistics.kills);
     $bottom.find(".assists").text(statistics.assists);
     $bottom.find(".deaths").text(statistics.deaths);
@@ -225,10 +229,12 @@ function updatePage(data) {
         $("#match_one_info").html(left_bl);
         $("#match_two_info").html(right_bl);
         
-        $("#match_tournament").show();
+        $("#match_tournament1").show();
+        $("#match_tournament2").show();
         $("#match_info").text("Best Of " + matchup.substr(2));
     } else {
-        $("#match_tournament").hide();
+        $("#match_tournament1").hide();
+        $("#match_tournament2").hide();
     }
 
     if (observed.steamid == 1 || !observed) {

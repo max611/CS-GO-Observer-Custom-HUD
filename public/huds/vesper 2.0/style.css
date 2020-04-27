@@ -1,12 +1,19 @@
 /* Official HUD for eFire League (https://efire.gg) - Powered by Vesper platform */
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
 
+@font-face {
+    font-family: 'bio_sansbold';
+    src: url('/files/bio-fonts/flat-it-bio-sans-bold-webfont.woff2') format('woff2'),
+         url('/files/bio-fonts/flat-it-bio-sans-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html,
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Work Sans', sans-serif;
+	font-family: 'bio_sansbold', sans-serif;
 	color: white;
 	background-color: rgba(0, 0, 0, 0);
 }
@@ -124,7 +131,7 @@ body {
 	#player-container {
 		position: fixed;
 		bottom: 100px;
-		font-family: 'Work Sans', sans-serif;
+		font-family: 'bio_sansbold', sans-serif;
 		left: 50%;
 		margin-left: -460px;
 		height: 70px;
@@ -336,7 +343,6 @@ body {
 		padding-left: 15px;
 		margin-left: 45px;
 		width: 100%;
-		transform: skew(-30deg);
 	}
 
 	.ct_color {
@@ -351,13 +357,12 @@ body {
 		height: 40%;
 		width: 100%;
 		padding-left: 15px;
-		margin-left: 23px;
-		transform: skew(-30deg);
+		margin-left: 45px;
 	}
 
 	#current_nick {
 		width: 35%;
-		font-family: 'Work Sans', sans-serif;
+		font-family: 'bio_sansbold', sans-serif;
 		font-weight: 600;
 		font-size: 30px;
 		/* display: inline-block; */
@@ -369,7 +374,6 @@ body {
 		float: left;
 		overflow:hidden;
 		text-overflow: ellipsis;
-		transform: skew(30deg);
 	}
 	#current_nick.no-flag{
 		padding-left:0px;
@@ -383,13 +387,12 @@ body {
 	}
 
 	#health_armor {
-		font-family: 'Work Sans', sans-serif;
+		font-family: 'bio_sansbold', sans-serif;
 		height: 100%;
 		width: 27%;
 		float: right;
 		/* margin-top: -7px; */
 		padding-top: 10px;
-		transform: skew(30deg);
 	}
 	#round_stats {
 		height: 85px;
@@ -439,7 +442,7 @@ body {
 		position: fixed;
 		bottom: 0px;
 		/* background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 120px, rgba(0, 0, 0, 0) 980px, rgba(0, 0, 0, 0.3)); */
-		font-family: 'Work Sans', sans-serif;
+		font-family: 'bio_sansbold', sans-serif;
 		left: 50%;
 		margin-left: -650px;
 		height: 420px;
@@ -450,11 +453,10 @@ body {
 
 	#ammo {
 		padding-left: 40px;
-		font-family: 'Work Sans', sans-serif;
+		font-family: 'bio_sansbold', sans-serif;
 		height: 100%;
 		width: 20%;
 		float: right;
-		transform: skew(30deg);
 		padding-top: 10px;
 	}
 
@@ -466,14 +468,12 @@ body {
 	#nick_also {
 		padding-top: 3px;
 		float: left;
-		transform: skew(30deg);
 	}
 
 	#stats {
 		float: right;
 		width: 30%;
 		margin-right: 110px;
-		transform: skew(30deg);
 		margin-top: -18px;
 	}
 
@@ -502,7 +502,6 @@ body {
 		height: 80%;
 		width: 20%;
 		float: right;
-		transform: skew(30deg);
 	}
 	#nades img {
 		height: 25px;
@@ -526,10 +525,12 @@ body {
 		background-color:rgba(255,202,40, 0.6);
 	}
 	#match_one_info .block{
-		float:right;
+		float: right;
+   		clear: right;
 	}
 	#match_two_info .block{
-		float:left;
+		float: left;
+   		clear: left;
 	}
 
 	.team {
@@ -570,6 +571,12 @@ body {
 		height: 27px;
 	}
 
+	.team {
+		margin-left: 10px;
+		margin-right: 10px;
+		margin-bottom: 10px;
+	}
+
 
 	#left>.player>.bar1>.hp_bar {
 		width: 330px;
@@ -578,8 +585,6 @@ body {
 		float: left;
 		/* text-shadow: 0px 0px 5px black; */
 		/* transform: scale(0.99,0.9); */
-		transform: skew(-30deg);
-		margin-left: -10px;
 	}
 
 	#right>.player>.bar1>.hp_bar {
@@ -589,12 +594,11 @@ body {
 		float: right;
 		/* text-shadow: 0px 0px 5px black; */
 		/* transform: scale(0.99,0.9); */
-		transform: skew(30deg);
-		margin-right: -10px;
 	}
 
 	.money {
 		height: 85px;
+		margin-bottom: 10px;
 		/* background: rgba(0, 0, 0, 0.65); */
 	}
 	#left > .money{
@@ -647,7 +651,6 @@ body {
 		height: 100%;
 		text-align: center;
 		font-weight: bold;
-		transform: skew(30deg);
 		margin-left: 20px;
 		margin-top: 5px;
 	}
@@ -664,7 +667,6 @@ body {
 		height: 100%;
 		text-align: center;
 		font-weight: bold;
-		transform: skew(-30deg);
 		margin-right: 20px;
 		margin-top: 5px;
 	}
@@ -684,7 +686,6 @@ body {
 		font-size:16px;
 		font-weight: medium;
 		text-overflow: ellipsis;
-		transform: skew(30deg);
 		margin-top: 2px;
 	}
 
@@ -699,7 +700,6 @@ body {
 		font-size:16px;
 		font-weight: medium;
 		text-overflow: ellipsis;
-		transform: skew(-30deg);
 		margin-top: 2px;
 	}
 
@@ -791,14 +791,12 @@ body {
 	#left /deep/ .hp_bar #weapon_icon{
 		max-width: 100%;
 		max-height: 100%;
-		transform: skew(30deg);
 		margin-right: 15px;
 		margin-top: 2px;
 	}
 	#right /deep/ .hp_bar #weapon_icon{
 		max-width: 100%;
 		max-height: 100%;
-		transform: skew(-30deg);
 		margin-left: 15px;
 		margin-top: 2px;
 	}
@@ -856,11 +854,10 @@ body {
 		margin-left: -585px;
 	}
 
-	#match_tournament {
-		width: 30%;
-		margin: auto;
-		height: 30px;
-		background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 100px, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.8) 220px, rgba(0, 0, 0, 0));
+	#match_tournament1 {
+	}
+
+	#match_tournament2 {
 	}
 
 	#match_teams {
@@ -903,7 +900,6 @@ body {
 	#team_1 {
 		text-align:right;
 		float: left;
-		transform: skew(30deg);
 		background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
 	}
 	.ct-color{
@@ -916,7 +912,6 @@ body {
 	#team_2 {
 		text-align: left;
 		float: right;
-		transform: skew(-30deg);
 		background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
 	}
 	#team_score{
@@ -927,7 +922,6 @@ body {
 	#team_1 > #team_name{
 		margin-top:3px;
 		float:right;
-		transform: skew(-30deg);
 	}
 	#avatar_container img {
 		width:139px;
@@ -939,19 +933,16 @@ body {
 	#team_2 > #team_name{
 		margin-top:3px;
 		float:left;
-		transform: skew(30deg);
 	}
 	#team_1 > #team_score{		
 		padding-right:20px;		
 		margin-right: 30px;
-		float:right;
-		transform: skew(-30deg);		
+		float:right;	
 	}
 	#team_2 > #team_score{
 		padding-left:23px;
 		margin-left:13px;
 		float:left;
-		transform: skew(30deg);
 	}
 	#team_logo{
 		position: relative;
@@ -978,46 +969,60 @@ body {
 	}
 	#team_1>#team_logo{
 		float:right;
-		transform: skew(-30deg);
 	}
 	#team_2>#team_logo{
 		float:left;
-		transform: skew(30deg);
 	}
 	#flash-container {
 		position: fixed;
 		bottom: 0px;
 		
-		font-family: 'Work Sans', sans-serif;
+		font-family: 'bio_sansbold', sans-serif;
 		left: 50%;
 		margin-left: -550px;
 		height: 420px;
 		width: 1100px;
 		/*transform: skewX(40deg);*/
 	}
-	#match_tournament > div{
+	#match_tournament1 > div{
 		line-height: 30px;
 	}
+
+	#match_tournament2 > div{
+		line-height: 30px;
+	}
+
 	#match_one_info{
+		padding-top: 0px;
+		margin-top:3px;
+		float:right;
+	}
+
+	#match_one_info_old{
 		float:left;
 		width:25%;
 		text-align:right;
 		font-weight:600;
 		background: rgba(0, 0, 0, 0.85);
-		transform: skew(30deg);
 		padding-top: 2px;
 		padding-bottom: 3px;
 		padding-right: 20px;
 		margin-left: -115px;
 		margin-top: 1px;
 	}
+
 	#match_two_info{
+		padding-top: 0px;
+		margin-top:3px;
+		float:left;
+	}
+
+	#match_two_info_old{
 		float:right;
 		width:25%;
 		text-align:left;
 		font-weight:600;
 		background: rgba(0, 0, 0, 0.85);
-		transform: skew(-30deg);
 		margin-left: 10px;
 		padding-top: 2px;
 		padding-bottom: 3px;
