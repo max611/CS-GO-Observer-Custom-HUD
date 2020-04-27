@@ -652,7 +652,7 @@ body {
 		text-align: center;
 		font-weight: bold;
 		margin-left: 20px;
-		margin-top: 5px;
+		margin-top: 2px;
 	}
 	#left>.player>.bottom_bar>.equip_bar>.hp_el {
 		transform: skew(0);
@@ -668,7 +668,7 @@ body {
 		text-align: center;
 		font-weight: bold;
 		margin-right: 20px;
-		margin-top: 5px;
+		margin-top: 2px;
 	}
 	#right>.player>.bottom_bar>.equip_bar>.hp_el {
 		transform: skew(0);
