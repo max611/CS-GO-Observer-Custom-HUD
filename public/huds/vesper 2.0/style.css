@@ -279,7 +279,7 @@ body {
 		color:white;
 	}
 	#bar_username.dead{
-		color:rgba(255, 255, 255, 0.3)
+		color:rgba(255, 255, 255, 0.1)
 	}
 	#armor-text.armor{
 		background-image: url("/files/img/armor.png");
