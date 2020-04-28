@@ -874,9 +874,11 @@ body {
 	}
 
 	#match_tournament1 {
+		display: none;
 	}
 
 	#match_tournament2 {
+		display: none;
 	}
 
 	#match_teams {
