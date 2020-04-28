@@ -452,6 +452,26 @@ function updatePage(data) {
                     $("#player-container").fadeTo(1000, 1);
             }
         }
+
+        // Casted by section
+        if (phase.phase == "freezetime" || phase.phase.substring(0,7) == "timeout") {
+            if (phase.phase_ends_in > 3) {
+                if ($(".caster-right").css("opacity") == 0) {
+                    $(".caster-right").fadeTo(1000, 1);
+
+                }
+            } else {
+                if ($(".caster-right").css("opacity") == 1) {
+                    $(".caster-right").fadeTo(1000, 0);
+                }
+            }
+
+        } else {
+            if ($(".caster-right").css("opacity") == 1) {
+                $(".caster-right").fadeTo(1000, 0);
+            }
+        }
+
         if (phase.phase_ends_in) {
             var countdown = Math.abs(Math.ceil(phase.phase_ends_in));
             var count_minute = Math.floor(countdown / 60);
