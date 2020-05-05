@@ -699,10 +699,10 @@ body {
 		float: left;
 		padding-left: 15px;
 		padding-top: 2px;
-		width: 120px;
+		width: 250px;
 		overflow: hidden;
 		white-space: nowrap;
-		font-size:22px;
+		font-size:18px;
 		font-weight: medium;
 		text-overflow: ellipsis;
 		margin-top: 0px;
@@ -713,10 +713,10 @@ body {
 		text-align:right;
 		padding-right: 15px;
 		padding-top: 2px;
-		width: 120px;
+		width: 250px;
 		overflow: hidden;
 		white-space: nowrap;
-		font-size:22px;
+		font-size:18px;
 		font-weight: medium;
 		text-overflow: ellipsis;
 		margin-top: 0px;
