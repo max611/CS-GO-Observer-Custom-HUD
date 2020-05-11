@@ -403,7 +403,12 @@ function updatePage(data) {
         $("#defuser").css("display", phase.phase == "defuse"
             ? "block"
             : "none");
-
+        
+        if (phase.phase == "timeout_t" || phase.phase == "timeout_ct" || phase.phase == "paused") {
+            $("#timeout_image").css("display", "block");
+        } else {
+            $("#timeout_image").css("display", "none");
+        }
         if (phase.phase == "bomb" || phase.phase == "defuse") {
             if (phase.phase == "bomb") {
                 bomb(parseFloat(phase.phase_ends_in));
