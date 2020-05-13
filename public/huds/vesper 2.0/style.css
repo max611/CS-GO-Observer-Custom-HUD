@@ -26,6 +26,13 @@ body {
   margin-left:46%;
   bottom:200px;
 }
+#timeout_image {
+  width:150px;
+  height:150px;
+  position:absolute;
+  margin-left:50%;
+  bottom:300px;
+}
 #defuser_title{
   position:absolute;
   left:23px;
