@@ -103,8 +103,8 @@ function fillPlayer(player,nr, side, max){
     let $top = $player.find(".bar1");
 
     let death_css = {
-        "height":"30px",
-        "margin-top":"-2px",
+        "height":"25px",
+        "margin-top":"4px",
     }
 
     let gradient = "linear-gradient(to " + side +", rgba(0,0,0,0) " + (100-statistics.health) + "%, " + health_color + " " + (100-statistics.health) + "%)";
@@ -136,9 +136,10 @@ function fillPlayer(player,nr, side, max){
 
     if(statistics.round_kills > 0){
         let img_css = {
-            "text-shadow":"0 0 10px black",
+            "text-shadow":"0em 0em 0.2em black",
             "float": side,
             "padding-top":"0px"
+
         };
         $bottom.find("#weapon_icon").prepend($("<img />").attr("src", "/files/img/death.png").addClass("death").css("float", side)).prepend($("<div></div>").text(statistics.round_kills).css(img_css));
     }
@@ -248,8 +249,7 @@ function updatePage(data) {
     var players = data.getPlayers();
     var round = data.round();
     var map = data.map();
-
-    var round_now = map.round + (round.phase == "over" || round.phase == "intermission"
+    var round_now = map.team_ct.score + map.team_t.score + (round.phase == "over" || round.phase == "intermission"
         ? 0
         : 1);
     if ((round.phase == "freezetime" && !freezetime) || round_now != last_round) {

@@ -140,9 +140,10 @@ body {
 		bottom: 100px;
 		font-family: 'bio_sansbold', sans-serif;
 		left: 50%;
-		margin-left: -460px;
+		margin-left: -300px;
 		height: 70px;
 		width: 920px;
+		text-shadow: black 0em 0em 0.2em;
 	}
 	#player-container.no-avatar {
 		margin-left: -390.5px;
@@ -152,7 +153,7 @@ body {
 		background: linear-gradient(to right, rgba(41, 182, 246, 0.85), rgba(41, 182, 246, 0.2));
 	}
 	#player-container.t #container2 #first_row #current_nick{
-		color: #FFCA28;
+		color: #FFCA28; 
 	}
 	#player-container.t #container2 #second_row{
 		background: linear-gradient(to right, rgba(255, 202, 40, 0.85), rgba(255, 202, 40, 0.2));
@@ -282,7 +283,7 @@ body {
 	#armor-text {		
 		background-repeat: no-repeat;
 		background-size: 23%;
-		background-position: left 40%;
+		background-position: 10% center;
 		display: inline-block;
 		font-size: 25px;
 		padding-left: 40px;
@@ -291,9 +292,12 @@ body {
 	}
 	#bar_username{
 		color:white;
+		text-shadow: black 0em 0em 0.2em;
 	}
 	#bar_username.dead{
-		color:rgba(255, 255, 255, 0.1)
+		color:#3a3a3a;
+		text-shadow: black 0em 0em 0em;
+
 	}
 	#armor-text.armor{
 		background-image: url("/files/img/armor.png");
@@ -368,7 +372,7 @@ body {
 	}
 
 	#current_nick {
-		width: 35%;
+		width: 60%;
 		font-family: 'bio_sansbold', sans-serif;
 		font-weight: 600;
 		font-size: 30px;
@@ -396,10 +400,10 @@ body {
 	#health_armor {
 		font-family: 'bio_sansbold', sans-serif;
 		height: 100%;
-		width: 27%;
+		width: 40%;
 		float: right;
 		/* margin-top: -7px; */
-		padding-top: 10px;
+		padding-top: 8px;
 	}
 	#round_stats {
 		height: 85px;
@@ -428,7 +432,7 @@ body {
 		width: 20%;
 		height: 100%;
 		color: #F44336;
-		text-shadow: 0 0 8px black;
+		text-shadow: 0px 0px 5px black;
 		font-size: 25px;
 		font-weight: 600;
 		margin-top: 12px;
@@ -458,15 +462,6 @@ body {
 		/*transform: skewX(40deg);*/
 	}
 
-	#ammo {
-		padding-left: 40px;
-		font-family: 'bio_sansbold', sans-serif;
-		height: 100%;
-		width: 20%;
-		float: right;
-		padding-top: 10px;
-	}
-
 	.inlining {
 		margin-right: 10px;
 		display: inline;
@@ -478,10 +473,10 @@ body {
 	}
 
 	#stats {
-		float: right;
+		float: left;
 		width: 30%;
 		margin-right: 110px;
-		margin-top: -18px;
+		margin-top: 2px;
 	}
 
 	#health-text {
@@ -494,28 +489,45 @@ body {
 	#clip-text {
 		background-position: left center;
 		display: inline-block;
-		font-size: 25px;
+		font-size: 20px;
 		font-weight: 900;
-		width: 40px;
+		width: 30px;
+		text-align: right;
+
 	}
 
 	#reserve-text {
 		display: inline-block;
-		font-size: 25px;
+		font-size: 15px;
 		font-weight: 900;
-		width: 55px;
+		width: 18px;
+		text-align: right;
+
+	}
+	#ammo {
+		height: 80%;
+		width: 20%;
+		margin-top: -22px;
+		float: right;	
+		text-align: right;
+		margin-right: 15px;
+
 	}
 	#nades {
 		height: 80%;
-		width: 20%;
+		width: 30%;
+		margin-top: -9px;
+		margin-right: 70px;
 		float: right;
 	}
 	#nades img {
-		height: 25px;
-        max-height: 25px;
+		height: 23px;
+        max-height: 23px;
         width:auto;
         filter: invert(100%);
         margin-right:10px;
+		margin-top: 2px;
+
 	}
 	.block{
 		width: 8px; 
@@ -551,7 +563,8 @@ body {
 		bottom: 0;
 	}
 	.equip_bar>.bar_weapon{
-		width:165px !important;
+		width:150px !important;
+		margin-top: 1px;
 	}
 
 	#right {
@@ -590,7 +603,7 @@ body {
 		background: linear-gradient(to right, #01579b, #03a9f4);
 		height: 100%;
 		float: left;
-		/* text-shadow: 0px 0px 5px black; */
+		text-shadow: 0px 0px 5px black; */
 		/* transform: scale(0.99,0.9); */
 	}
 
@@ -599,7 +612,7 @@ body {
 		background: linear-gradient(to left, #ff6f00, #ffa000);
 		height: 100%;
 		float: right;
-		/* text-shadow: 0px 0px 5px black; */
+		text-shadow: 0px 0px 5px black; */
 		/* transform: scale(0.99,0.9); */
 	}
 
@@ -613,7 +626,9 @@ body {
 		height: 85px;
 		margin-bottom: 10px;
 		background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+		text-align: right;
 		/* background: rgba(0, 0, 0, 0.65); */
+
 	}
 
 	.caster-left {
@@ -627,11 +642,24 @@ body {
 		visibility: hidden;
 	}
 
+	.caster_names{
+		color:white;
+		margin-right: 10px;
+		text-shadow: black 0em 0em 0.2em;
+		color: white;
+		font-size: 20px;
+
+	}
+
 	#left > .money{
 		 background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+		 text-shadow: black 0em 0em 0.2em;
+
 	}
 	#right > .money{
 		background: linear-gradient(to left, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+		text-shadow: black 0em 0em 0.2em;
+
 	}
 
 	.stat_t {
@@ -667,8 +695,8 @@ body {
 		font-size: 16px;
 	}
 	.death {
-		height: 70% !important;
-        margin-top: 5px
+		height: 60% !important;
+        margin-top: 0px
 	}
 	#left>.player>.bar1>.hp_bar>.hp_el,
 	#left>.player>.bottom_bar>.equip_bar>.hp_el {
@@ -682,7 +710,7 @@ body {
 	}
 	#left>.player>.bottom_bar>.equip_bar>.hp_el {
 		transform: skew(0);
-		margin-top: 0;
+		margin-top: 1;
 		margin-left: 0;
 	}
 
@@ -698,7 +726,7 @@ body {
 	}
 	#right>.player>.bottom_bar>.equip_bar>.hp_el {
 		transform: skew(0);
-		margin-top: 0;
+		margin-top: 1;
 		margin-right: 0;
 	}
 
@@ -805,6 +833,7 @@ body {
 
 	.bar_weapon>.invert {
 		filter: invert(70%);
+		padding-left: 3px;
 	}
 
 	.bomb_defuse>.invert_brightness {
@@ -835,7 +864,7 @@ body {
 		color: #ccff00;
 		text-shadow: 0px 0px 10px black;
 		font-weight: bold;
-		margin-top: 0px;
+		margin-top: 1px;
 	}
 
 	.img-hor {
@@ -849,23 +878,24 @@ body {
 
 	.equip_bar>.bomb_defuse>img,
 	.equip_bar>.bar_weapon>img,
+
 	.hp_bar>.bar_weapon>img,
 	.equip_bar>.hp_el>img {
 		height: 60%;
 		width: auto;
 		margin: auto;
 		margin-top: 4px;
-		margin-left:2px;
+		margin-left: 2px;
 		padding-top: 0px;
 	}
 
-	/* .hp_bar>.bar_weapon>img.invert {
-		filter: drop-shadow(0.5px 0.5px 1px white) drop-shadow(-0.5px -0.5px 1px white) invert(70%);
+	.hp_bar>.bar_weapon>img.invert {
+		filter: drop-shadow(0.5px 1px 2px white) invert(70%);
 	}
 
 	.hp_bar>.bar_weapon>img.checked.invert {
-		filter: drop-shadow(0.5px 0.5px 1px white) drop-shadow(-0.5px -0.5px 1px white) invert(100%);
-	} */
+		filter: drop-shadow(0.5px 1px 2px white) invert(100%);
+	}
 
 	#right>.player {
 		float: right;
@@ -955,7 +985,7 @@ body {
 		width:139px;
 		height:139px;
 		margin-top:1px;
-		margin-left:45px;
+		margin-left:31px;
 	}
 
 	#team_2 > #team_name{

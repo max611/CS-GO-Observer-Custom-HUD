@@ -6,6 +6,7 @@ html
     script.
       var ip = "#{ip}",
       port = "#{port}",
+      disp_avatars = #{avatars},missharvey
       disp_avatars = #{avatars},
       delay = #{delay};
     script(src="/js/main.js")
@@ -86,28 +87,26 @@ html
               | -$1000
       #player-container
         #avatar_container(style="width:139px; height:139px; margin-top:-139px; margin-left: 14px; position:absolute")
-        #container2(style="width:781px;")
+        #container2(style="width:500px;")
           #first_row
             #current_nick
               | oszten
-            #ammo
-              img(src='/files/img/bullets.png', style='max-height: 27px; width:auto; filter: invert(100%);float:left;margin-right: 5px;')
-              #clip-text.clip 100
-              #reserve-text.reserve 100           
             #health_armor
               #health-text 100
-              #armor-text 100
+              #armor-text 100         
           #second_row
-            #nick_also.inlining
-              | NICK
-            #nades.inlining
-              img(src='/files/img/grenades/weapon_flashbang.png', style='max-height: 20px; width:auto; filter: invert(100%); margin-right:10px;')
-              img(src='/files/img/grenades/weapon_smokegrenade.png', style='max-height: 20px; width:auto; filter: invert(100%); margin-right:10px;')
-              img(src='/files/img/grenades/weapon_hegrenade.png', style='max-height: 20px; width:auto; filter: invert(100%); margin-right:10px;')
             #stats.inlining
               #kills_count.inlining K: 13 
               #assist_count.inlining A: 13 
               #death_count.inlining D: 13 
+            #nades.inlining
+              img(src='/files/img/grenades/weapon_flashbang.png', style='max-height: 20px; width:auto; filter: invert(100%); margin-right:10px;')
+              img(src='/files/img/grenades/weapon_smokegrenade.png', style='max-height: 20px; width:auto; filter: invert(100%); margin-right:10px;')
+              img(src='/files/img/grenades/weapon_hegrenade.png', style='max-height: 20px; width:auto; filter: invert(100%); margin-right:10px;') 
+            #ammo.inlining
+              #clip-text.clip 100
+              #reserve-text.reserve 100
+              img(src='/files/img/bullets.png', style='max-height: 21px; width:auto; filter: invert(100%);float:right;margin-left: 12px; ;margin-top: 3px;')
       #left.team
         .caster-left
           img(src='/files/img/RED_BROADCAST_2.png', style='margin-top:5px; margin-right:60px;')
@@ -231,7 +230,8 @@ html
         .caster-right
           img(src='/files/img/RED_BROADCAST_2.png', style='margin-top:5px; margin-left:60px;')
           div(style='float:left; color: #ccff00; float:right;')
-            .first_title_tm(style='width: 300px;') Cast: @missharvey
+            .caster_names
+              .first_title_tm(style='width: 300px;') Cast: @missharvey
         .money
           img.invert(src='/files/img/elements/team.png', style='height: 35px; margin-top:25px; margin-left:10px; margin-right:10px; float:right; ')
           div(style='width:30%; float:right; color: #ccff00; text-align:right;')
