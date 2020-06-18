@@ -925,7 +925,7 @@ body {
 		background: linear-gradient(to right, rgba(0, 0, 0, 0),rgba(0, 0, 0, 1) 500px, rgba(0, 0, 0, 1),rgba(0, 0, 0, 1) 550px ,rgba(0, 0, 0, 0));
 	}
 	#team_name{
-		font-size: 40px;
+		font-size: 30px;
 	}
 
 	#time_counter {
@@ -978,7 +978,7 @@ body {
 		padding-top: 10px;
 	}
 	#team_1 > #team_name{
-		margin-top:-4px;
+		margin-top:5px;
 		float:right;
 	}
 	#avatar_container img {
@@ -989,7 +989,7 @@ body {
 	}
 
 	#team_2 > #team_name{
-		margin-top:-4px;
+		margin-top:5px;
 		float:left;
 	}
 	#team_1 > #team_score{		
