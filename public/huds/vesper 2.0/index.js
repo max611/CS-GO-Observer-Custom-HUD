@@ -23,8 +23,8 @@ function fillObserved(player) {
         $("#current_nick").css("background-image", "").addClass("no-flag");
     }
 
-    $("#kills_count").html(statistics.kills + " K /");
-    $("#assist_count").html(statistics.assists + " A /");
+    $("#kills_count").html(statistics.kills + " K");
+    $("#assist_count").html(statistics.assists +" A");
     $("#death_count").html(statistics.deaths + " D");
 
     $("#player-container")
@@ -35,6 +35,11 @@ function fillObserved(player) {
     $("#nick_also").html(player.real_name + " ");
 
     $("#nades").html("");
+    if(statistics.defusekit){
+        $("#defusekit").css("display","block")
+    }else{
+        $("#defusekit").css("display","none")
+    }
 
 
     for (let key in weapons) {
@@ -48,9 +53,11 @@ function fillObserved(player) {
             if (weapon.type == "Grenade" || weapon.type == "C4" || weapon.type == "Knife" || statistics.health == 0) {
                 $(".clip").html("");
                 $(".reserve").html("");
+                $("#ammo").css("display", "none")
             } else {
                 $(".clip").html(weapon.ammo_clip + "/");
                 $(".reserve").html(weapon.ammo_reserve);
+                $("#ammo").css("display", "block")
             }
         }
     }
@@ -318,15 +325,17 @@ function updatePage(data) {
                 : "t");
 
         $("#team_1")
-            .removeClass("ct t")
+            .removeClass("ct-color t-color")
             .addClass(test_player2.team.toLowerCase() + "-color");
         $("#team_2")
-            .removeClass("ct t")
+            .removeClass("ct-color t-color")
             .addClass(test_player2.team.toLowerCase() != "t"
                 ? "t-color"
                 : "ct-color");
-        $("#team_1").css("border-bottom", test_player2.team.toLowerCase() != "t" ? "1px solid #29B6F6" : "1px solid #FFCA28")
-        $("#team_2").css("border-bottom", test_player2.team.toLowerCase() != "t" ? "1px solid #29B6F6" : "1px solid #FFCA28")
+        $("#team_1").css("border-bottom", test_player2.team.toLowerCase() != "t" ? "3px solid #29B6F6" : "3px solid #FFCA28")
+        $("#team_2").css("border-bottom", test_player2.team.toLowerCase() != "t" ? "3px solid #FFCA28" : "3px solid #29B6F6")
+        $("#team_1 #team_score").css("background", test_player2.team.toLowerCase() != "t" ? "#29B6F6" : "#FFCA28")
+        $("#team_2 #team_score").css("background", test_player2.team.toLowerCase() != "t" ? "#FFCA28" : "#29B6F6")
 
         $("#left")
             .find("#team_money_1")
